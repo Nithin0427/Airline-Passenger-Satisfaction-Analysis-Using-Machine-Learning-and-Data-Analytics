@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VNSN - Wear Your Vibe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"/>
+  <style>
+    :root {
+      --primary: #1e88e5;
+      --secondary: #42a5f5;
+      --bg-home: #e3f2fd;
+      --bg-collections: #fce4ec;
+      --bg-about: #f1f8e9;
+      --bg-contact: #fff3e0;
+      --text: #111;
+      --muted: #555;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: var(--primary) !important;
+    }
+
+    .nav-link {
+      color: var(--text) !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+    }
+
+    .hero-section {
+      background-color: var(--bg-home);
+      min-height: 90vh;
+      padding: 100px 20px 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-images img {
+      width: 220px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-shop {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border: none;
+      padding: 12px 35px;
+      color: white;
+      font-weight: bold;
+      border-radius: 40px;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    .offers {
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+    }
+
+    .section-title h2 {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    #collections {
+      background-color: var(--bg-collections);
+    }
+
+    #about {
+      background-color: var(--bg-about);
+    }
+
+    #contact {
+      background-color: var(--bg-contact);
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">VNSN</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Wear Your Vibe</h1>
+      <p>Streetwear. Minimalism. Self-expression.</p>
+      <a href="#collections" class="btn btn-shop">Discover Now</a>
+    </div>
+    <div class="hero-images">
+      <img src="home1.webp" alt="Hero Left">
+      <img src="home2.jpg" alt="Hero Right">
+    </div>
+  </section>
+
+  <section class="offers">
+    <marquee behavior="scroll" direction="left">
+      🎉 Buy 2 Get 10% Off! | 🎉 Buy 3 Get 20% Off! | Limited Time Offer - Free Shipping Over ₹999!
+    </marquee>
+  </section>
+
+        <!-- Your collection cards go here -->
+<section id="collections" class="py-5">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Collections</h2>
+      <p>Oversized T-Shirts, Hoodies, and Regular Fit Tees for Men and Women</p>
+    </div>
+    <div class="row g-4">
+      <!-- Women Product 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect1.avif" class="card-img-top" alt="Women's Oversized Tee">
+          <div class="card-body">
+            <h5 class="card-title">Oversized Graphic Tee (Women)</h5>
+            <p class="card-text">Relaxed fit, bold designs, pure cotton comfort.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Men Product 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect3.webp" class="card-img-top" alt="Men's Oversized Tee">
+          <div class="card-body">
+            <h5 class="card-title">Oversized Graphic Tee (Men)</h5>
+            <p class="card-text">Drop-shoulder style with statement artwork.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unisex Tee -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect5.1.jpeg" class="card-img-top" alt="Unisex Tee">
+          <div class="card-body">
+            <h5 class="card-title">Unisex Classic Tee</h5>
+            <p class="card-text">Premium cotton, everyday comfort, universal fit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Men Hoodie -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect4.webp" class="card-img-top" alt="Men Hoodie">
+          <div class="card-body">
+            <h5 class="card-title">Urban Hoodie (Men)</h5>
+            <p class="card-text">Heavyweight cotton blend for street comfort.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Women Hoodie -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect2.webp" class="card-img-top" alt="Women Hoodie">
+          <div class="card-body">
+            <h5 class="card-title">Cozy Hoodie (Women)</h5>
+            <p class="card-text">Fleece-lined warmth with minimalist design.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unisex Street Hoodie -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="collect6.jpg" class="card-img-top" alt="Unisex Hoodie">
+          <div class="card-body">
+            <h5 class="card-title">Unisex Street Hoodie</h5>
+            <p class="card-text">Bold, oversized and gender-neutral statement piece.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>About VNSN</h2>
+      </div>
+      <p style="font-size: 1.1rem;">
+        VNSN is a lifestyle-forward fashion label built for modern individuality. Our collections merge comfort and expression through minimal design and quality fabrics. Made for creators, dreamers, and everyday rebels.<br><br>
+        Founded with the belief that fashion is a canvas for personal identity, VNSN blends contemporary aesthetics with timeless appeal. Every piece is carefully curated to make you feel confident, stylish, and authentically yourself. Whether you're stepping out or staying in, VNSN empowers you to dress boldly and live freely.<br><br>
+        We're not just a brand. We're a vibe — and you're invited.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+      <p style="font-size: 1.1rem;">
+        <strong>Company Name:</strong> VNSN Apparel Pvt. Ltd.<br>
+        <strong>Headquarters:</strong> 123 Style Street, Bandra West, Mumbai, Maharashtra, India<br>
+        <strong>Phone:</strong> +91 98765 43210<br>
+        <strong>Email:</strong> <a href="mailto:support@vnsnwear.com">support@vnsnwear.com</a><br>
+        <strong>Instagram:</strong> <a href="https://instagram.com/vnsnwear" target="_blank">@vnsnwear</a><br><br>
+        <strong>For media & collaborations:</strong> <a href="mailto:collab@vnsnwear.com">collab@vnsnwear.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 VNSN. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
